@@ -1,0 +1,130 @@
+.temporary__storage {
+    width: 350px;
+    height: 350px;
+    background-color: #1b1a1a;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 350px;
+    background-color: #1b1a1a;
+    position: relative;
+    color: #e6e6ea;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    background-color: rgb(144, 197, 47);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.image::before {
+    content: "LIVE";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    font-weight: 900;
+    font-size: .8em;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.image::after {
+    content: "102.k viewers";
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    font-weight: 300;
+    font-size: .7em;
+    background-color: rgb(59, 53, 53);
+    border-radius: 2px;
+    padding: 3px 5px;
+}
+
+.image__overlay {
+    width: 100%;
+    height: 180px;
+}
+
+.image:hover {
+    transform: translate(8px, -8px);
+    box-shadow: -1px 1px 0px 0px violet,-2px 2px 0px 0px violet,-3px 3px 0px 0px violet,-4px 4px 0px 0px violet,-5px 5px 0px 0px violet,-6px 6px 0px 0px violet,-7px 7px 0px 0px violet,-8px 8px 0px 0px violet;
+  }
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #371f05, #654607, #8b7600, #a4ae00, #a8eb12);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.content__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+<!-- Container for temporary storage of dynamic content -->
+<div class="temporary__storage">
+
+    <!-- Streaming event card -->
+    <div class="card">
+  
+      <!-- Image placeholder for the streaming event -->
+      <div class="image"></div>
+  
+      <!-- Overlay for image effects -->
+      <div class="image__overlay"></div>
+  
+      <!-- Content details for the streaming event -->
+      <div class="content">
+  
+        <!-- Streamer's avatar -->
+        <div class="avatar"></div>
+  
+        <!-- Text section for stream information -->
+        <div class="content__text">
+  
+          <!-- Stream title with event emoji and date -->
+          <span class="stream__title">🚀2023 LEC Summer - Group Stage - Day 2 - KOI vs. G2</span>
+  
+          <!-- Streamer's details -->
+          <div class="content__body">
+  
+            <!-- Streamer's name -->
+            <span class="streamer__name">ibai</span>
+  
+            <!-- Event or game associated with the stream -->
+            <span class="event">League of Legends</span>
+          </div>
+  
+          <!-- Categories associated with the stream -->
+          <span class="categories">
+            <!-- Links to different categories or tags -->
+            <a href="" class="categories__btn">Espanol</a>
+            <a href="" class="categories__btn">KOI</a>
+            <a href="" class="categories__btn">LOL</a>
+          </span>
+        </div>
+  
+      </div>
+    </div>
+</div>
+  
